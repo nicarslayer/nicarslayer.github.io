@@ -11,16 +11,14 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"
-);
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nicarslayer.github.io/react-unsplash/precache-manifest.af2f0d36e80e202341bf440f721c8e0e.js"
+  "/nicarslayer.github.io/react-unsplash/precache-manifest.9557015be141c50af156ed3bd771e1b0.js"
 );
 
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
@@ -35,11 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(
-  workbox.precaching.getCacheKeyForURL(
-    "/nicarslayer.github.io/react-unsplash/index.html"
-  ),
-  {
-    blacklist: [/^\/_/, /\/[^\/?]+\.[^\/]+$/],
-  }
-);
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/nicarslayer.github.io/react-unsplash/index.html"), {
+  
+  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+});
