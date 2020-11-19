@@ -64,7 +64,9 @@ delete e[b].onload,e[b]=!0)}f="";q+=1;d()};var p=function(){window.removeEventLi
         onUpdate: function () {
           $(".first-section img").attr(
             "src",
-            "./img/first-section/" + imagesArray[obj.curImg] + ".jpg"
+            "https://nicarslayer.github.io/macbook/img/first-section/" +
+              imagesArray[obj.curImg] +
+              ".jpg"
           );
         },
       })
